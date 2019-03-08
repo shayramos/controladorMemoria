@@ -1,0 +1,4 @@
+module VGAController();
+begin
+	.VGASincController();
+endmodule

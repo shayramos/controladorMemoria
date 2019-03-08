@@ -1,0 +1,4 @@
+module FIFOEmpty();
+begin
+
+endmodule

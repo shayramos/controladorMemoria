@@ -1,0 +1,34 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "graphic" (version "1.4"))
+(block
+	(rect 240 48 424 256)
+	(text "MemoryController" (rect 5 5 95 17)(font "Intel Clear" ))	(text "inst" (rect 5 206 23 218)(font "Intel Clear" ))	(block_io "CoordX[10..0]" (input))
+	(block_io "CoordY[10..0]" (input))
+	(block_io "Clock50Mhz" (input))
+	(block_io "Reset" (input))
+	(block_io "Blank" (output))
+	(block_io "Hsync" (output))
+	(block_io "Vsync" (output))
+	(block_io "R[7..0]" (output))
+	(block_io "G[7..0]" (output))
+	(block_io "B[7..0]" (output))
+)

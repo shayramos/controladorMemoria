@@ -1,0 +1,99 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 184 176)
+	(text "VGAController" (rect 5 0 92 14)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 144 26 156)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Clock25" (rect 0 0 48 14)(font "Intel Clear" (font_size 8)))
+		(text "Clock25" (rect 21 27 69 41)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Reset" (rect 0 0 34 14)(font "Intel Clear" (font_size 8)))
+		(text "Reset" (rect 21 43 55 57)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "Data" (rect 0 0 28 14)(font "Intel Clear" (font_size 8)))
+		(text "Data" (rect 21 59 49 73)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 168 32)
+		(output)
+		(text "Read_en" (rect 0 0 51 14)(font "Intel Clear" (font_size 8)))
+		(text "Read_en" (rect 96 27 147 41)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 32)(pt 152 32))
+	)
+	(port
+		(pt 168 48)
+		(output)
+		(text "R_channel" (rect 0 0 62 14)(font "Intel Clear" (font_size 8)))
+		(text "R_channel" (rect 85 43 147 57)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 48)(pt 152 48))
+	)
+	(port
+		(pt 168 64)
+		(output)
+		(text "G_channel" (rect 0 0 63 14)(font "Intel Clear" (font_size 8)))
+		(text "G_channel" (rect 84 59 147 73)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 64)(pt 152 64))
+	)
+	(port
+		(pt 168 80)
+		(output)
+		(text "B_channel" (rect 0 0 62 14)(font "Intel Clear" (font_size 8)))
+		(text "B_channel" (rect 85 75 147 89)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 80)(pt 152 80))
+	)
+	(port
+		(pt 168 96)
+		(output)
+		(text "Blank" (rect 0 0 34 14)(font "Intel Clear" (font_size 8)))
+		(text "Blank" (rect 113 91 147 105)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 96)(pt 152 96))
+	)
+	(port
+		(pt 168 112)
+		(output)
+		(text "Hsync" (rect 0 0 38 14)(font "Intel Clear" (font_size 8)))
+		(text "Hsync" (rect 109 107 147 121)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 112)(pt 152 112))
+	)
+	(port
+		(pt 168 128)
+		(output)
+		(text "Vsync" (rect 0 0 37 14)(font "Intel Clear" (font_size 8)))
+		(text "Vsync" (rect 110 123 147 137)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 128)(pt 152 128))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 144))
+	)
+)

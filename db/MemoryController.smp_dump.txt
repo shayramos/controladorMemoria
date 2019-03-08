@@ -1,0 +1,8 @@
+
+State Machine - |MemoryController|VGAController:inst_VGA|VGADataController:inst_2|estado_atual
+Name estado_atual.Espera1Clk estado_atual.Escreve estado_atual.WaitNewLinha estado_atual.Inicio estado_atual.GetData 
+estado_atual.Inicio 0 0 0 0 0 
+estado_atual.WaitNewLinha 0 0 1 1 0 
+estado_atual.Escreve 0 1 0 1 0 
+estado_atual.Espera1Clk 1 0 0 1 0 
+estado_atual.GetData 0 0 0 1 1 

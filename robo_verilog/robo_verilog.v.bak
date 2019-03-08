@@ -1,0 +1,70 @@
+module_robo(h,l,f,g,clk);
+output(f,g);                   // declarar reg nessa linha tambem ? porque?
+input(h,l);
+input(clk);
+
+	reg [1:0]; estado_atual,estado_futuro;    //qual o criterio para definir o reg e seu tamanho?
+	parameter
+	estado_00=2'b00;
+	estado_01=2'b01;
+	estado_10=2'b10;
+	estado_11=2'b11;
+	
+always@(estado_atual|h|l)
+begin
+	case(estado_atual)
+		estado_00:case({h,l})
+			00:estado_futuro=estado_00;
+			01:estado_futuro=estado_10;
+			11:estado_futuro=estado_11;
+			10:estado_futuro=estado_01;
+	case(estado_atual)
+		estado_01:case({h,l})
+			00|10:estado_futuro=estado_01;
+			11:estado_futuro=estado_11;
+			01:estado_futuro=estado_10;
+	case(estado_atual)
+		estado_11:case({h,l})
+			11|00:estado_futuro=estado_11;
+			10:estado_futuro=estado_01;
+			01:estado_futuro=estado_10;
+	case(estado_atual)
+		estado_10:case({h,l})
+			00|10:estado_futuro=estado_00;
+			01:estado_futuro=estado_10;
+			11:estado_futuro-estado_11;
+			endcase                         // onde fechar cada case? 
+									end
+										// como criar um modulo dentro do outro? é necessário?
+										
+always@(posedge clk)
+	begin
+		estado_atual<=estado_futuro;
+		end
+always@(negedge rst) 					// eu preciso declarar rst no começo?
+	begin
+		estado_futuro<=estado_        // esse rst é sincrono?	no caso desse robô, pra qual estado iria o rst?		
+					end
+					
+always@(estado_atual|h|l)
+	begin
+	case(estado_atual)
+		estado_00:case({h,l})
+			10|11:f=0,g=1;
+			00|01:f=1,g=0;
+	case(estado_atual)
+		estado_01:case({h,l})
+			00|10|11:f=0,g=1;
+			01:f=1,g=0;
+	case(estado_atual)
+		estado_10:case({h,l})
+			11|00|10:f=0,g=1;
+			01:f=1,g=0;
+	case(estado_atual)
+		estado_11:case({h,l})
+			00|11|10:f=0,g=1;
+			01:f=1,g=0;
+			endcase
+			end
+			endmodule
+			
